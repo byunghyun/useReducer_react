@@ -1,5 +1,5 @@
 import React from 'react'
-import CounterTemplate from './CounterTemplate'
+import CounterTemplate from './template/CounterTemplate'
 
 const counter = () => {
     return (

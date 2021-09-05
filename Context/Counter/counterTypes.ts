@@ -1,4 +1,4 @@
-export type CounterState = {
+export interface CounterState {
     text: string,
     count: number
 }

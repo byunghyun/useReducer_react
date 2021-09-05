@@ -1,16 +1,10 @@
 import type { NextPage } from 'next'
-import { useReducer, useState, createContext, useContext } from 'react'
-import { IndexContext, indexInitialState, indexReducer } from '../reducer/indexReducer'
 import Counter from './Counter'
-import { CounterState } from './counterTypes'
+import CounterContext from '../Context/Counter/CountProvider';
 
-const Home: NextPage = () => {
-  const [state, dispatch] = useReducer(indexReducer, indexInitialState);
-  const value = {state, dispatch}
+const Home: NextPage = ({children}) => {
   return (
-    <IndexContext.Provider value={value}>
-      <Counter/>
-    </IndexContext.Provider>
+      <Counter />
   )
 }
 
